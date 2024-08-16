@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shake</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        display: grid;
+        place-items: center;
+      }
+      h1 {
+        color: #fff;
+        color: red;
+        letter-spacing: 3px;
+        font-size: 104px;
+        position: relative;
+
+        /* text-shadow: -3px 10px 50px #fff; */
+        /* animation: swing 2s linear infinite; */
+      }
+      h1::after {
+        content: "Nitesh...";
+        color: #fff;
+        position: absolute;
+        /* width: 20%; */
+        top: 0;
+        font-size: 104px;
+        left: 0;
+        border-right: 2px solid #fff;
+        overflow: hidden;
+        /* animation: textreveal 1s linear infinite alternate; */
+      }
+      @keyframes textreveal {
+        0% {
+          width: 100%;
+        }
+        25% {
+          width: 75%;
+        }
+        50% {
+          width: 50%;
+        }
+        75% {
+          width: 25%;
+        }
+        100% {
+          width: 0%;
+        }
+      }
+      @keyframes swing {
+        0% {
+          rotate: 30deg;
+        }
+        50% {
+          rotate: -30deg;
+        }
+        100% {
+          rotate: 30deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nitesh...</h1>
+  </body>
+</html>
